@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -11,8 +11,8 @@ namespace ProblemTwo_CompilationError
     {
         static void Main(string[] args)
         {
-            Employee empOne = new DirectReport(1, "Sam", 3, DateTime.ParseExact("01-01-2021", "dd-MM-yyyy", CultureInfo.InvariantCulture),null,"SPS200");
-            Employee empTwo = new DirectReport(2, "Smith", 3, DateTime.ParseExact("01-01-2021", "dd-MM-yyyy", CultureInfo.InvariantCulture),null,"SPS200");
+            Employee empOne = new DirectReport(1, "Sam", 3, DateTime.ParseExact("01-01-2021", "dd-MM-yyyy", CultureInfo.InvariantCulture), null, "SPS200");
+            Employee empTwo = new DirectReport(2, "Smith", 3, DateTime.ParseExact("01-01-2021", "dd-MM-yyyy", CultureInfo.InvariantCulture), null, "SPS200");
             Employee empThree = new DirectReport(3, "Harvey", 3, DateTime.ParseExact("01-01-2021", "dd-MM-yyyy", CultureInfo.InvariantCulture), null, "SPS200");
             Employee empFour = new DirectReport(4, "Specter", 3, DateTime.ParseExact("01-01-2021", "dd-MM-yyyy", CultureInfo.InvariantCulture), null, "SPS200");
             Employee empFive = new DirectReport(5, "Mike", 4, DateTime.ParseExact("01-01-2021", "dd-MM-yyyy", CultureInfo.InvariantCulture), null, "SPS200");
@@ -24,7 +24,7 @@ namespace ProblemTwo_CompilationError
             lstDirectReports.Add(empFive);
             Manager manEmp = new Manager(1001, "Fred", 10, DateTime.ParseExact("01-12-2001", "dd-MM-yyyy", CultureInfo.InvariantCulture), lstDirectReports, "SPS001");
 
-            var lst=manEmp.GetMyReports();
+            var lst = manEmp.GetMyReports();
             foreach (var item in lst)
             {
                 Console.WriteLine(item);
